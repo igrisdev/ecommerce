@@ -23,6 +23,7 @@ export default {
         local_icons_secondary: '#FFFFFF',
         local_button_primary: '#EFEFEF',
         local_button_secondary: '#FFFFFF',
+        local_button_tertiary: '#000000',
       },
     },
   },

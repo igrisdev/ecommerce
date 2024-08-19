@@ -24,6 +24,7 @@ export default {
         local_button_primary: '#EFEFEF',
         local_button_secondary: '#FFFFFF',
         local_button_tertiary: '#000000',
+        local_button_quaternary: '#121212',
       },
     },
   },

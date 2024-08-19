@@ -36,17 +36,20 @@ import { Image } from 'astro:assets'
   <div
     class='p-2 bg-local_background_tertiary rounded-sm overflow-hidden flex items-center justify-center'
   >
-    <Image
-      width={256}
-      height={1}
-      src='https://cdn.dribbble.com/userupload/8002232/file/original-3f3260df58d06d1de743f6a33659700b.jpg?resize=752x'
-      alt='A bird'
-    />
+    <a href='/product/1'>
+      <Image
+        width={256}
+        height={1}
+        src='https://cdn.dribbble.com/userupload/8002232/file/original-3f3260df58d06d1de743f6a33659700b.jpg?resize=752x'
+        alt='A bird'
+        loading='eager'
+      />
+    </a>
   </div>
 
   <div class='mt-2'>
     <div>
-      <h3 class='text-lg font-semibold'><a href=''>Titulo</a></h3>
+      <h3 class='text-lg font-semibold'><a href='/product/1'>Titulo</a></h3>
       <small>Marca</small>
     </div>
     <div class='flex justify-between'>

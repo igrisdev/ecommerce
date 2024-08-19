@@ -3,16 +3,37 @@ import { SearchHome } from './SearchHome'
 ---
 
 <header
-  class='max-w-7xl mx-auto sm:px-4 h-20 flex items-center justify-between text-local_text_primary border-b-[1px] mb-4'
+  class='max-w-7xl mx-auto px-4 xl:px-0 h-20 flex items-center gap-x-3 justify-between text-local_text_primary border-b-[1px] mb-4'
 >
   <section>
     <h1 class='text-2xl font-semibold'>ECOMMERCE</h1>
   </section>
-  <section class='w-full'>
+  <section class='w-full hidden sm:block'>
     <SearchHome client:load />
   </section>
-  <section class='flex gap-x-4'>
-    <div class='flex items-center gap-x-2'>
+
+  <section class='flex items-center gap-x-2 sm:gap-x-4'>
+    <button
+      class='block sm:hidden p-2.5 text-sm h-full text-white bg-local_background_secondary rounded-full hover:bg-local_background_secondary/90'
+    >
+      <svg
+        class='w-4 h-4'
+        aria-hidden='true'
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 20 20'
+      >
+        <path
+          stroke='currentColor'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          stroke-width='2'
+          d='m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z'
+        ></path>
+      </svg>
+    </button>
+
+    <div class='items-center gap-x-2 hidden md:flex'>
       <div>
         <svg
           width='30'
@@ -34,7 +55,7 @@ import { SearchHome } from './SearchHome'
         </h3>
       </div>
     </div>
-    <div class='flex items-center gap-4'>
+    <div class='flex items-center gap-x-2 sm:gap-x-4'>
       <div>
         <svg
           width='30'
@@ -64,11 +85,34 @@ import { SearchHome } from './SearchHome'
             ></path>
           </svg>
         </div>
-        <div class='flex flex-col w-24'>
+        <div class='flex-col w-24 hidden lg:flex'>
           <small>Total</small>
           <p class='text-lg font-semibold truncate'>$0</p>
         </div>
       </div>
     </div>
+
+    <button
+      class='block md:hidden p-2 text-white bg-local_background_secondary rounded-sm hover:bg-local_background_secondary/90'
+    >
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width='24'
+        height='24'
+        viewBox='0 0 24 24'
+        fill='none'
+        stroke='currentColor'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+        class='icon icon-tabler icons-tabler-outline icon-tabler-menu-2'
+        ><path
+          stroke='none'
+          d='M0 0h24v24H0z'
+          fill='none'
+        ></path><path d='M4 6l16 0'></path><path d='M4 12l16 0'></path><path
+          d='M4 18l16 0'></path></svg
+      >
+    </button>
   </section>
 </header>

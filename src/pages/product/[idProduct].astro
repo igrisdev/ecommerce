@@ -4,12 +4,23 @@ import Layout from '@layouts/Layout.astro'
 ---
 
 <Layout title='Nombre producto'>
-  <div class='relative grid grid-cols-2 max-w-7xl mx-auto px-4 xl:p-0 gap-x-4'>
-    <div class=''>
-      <section></section>
+  <div
+    class='relative grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-4 xl:p-0 gap-x-4'
+  >
+    <div class='flex flex-col gap-y-4'>
+      <section>
+        Officiis possimus dolores maxime, minima exercitationem aperiam eligendi
+        sed itaque corrupti at dignissimos beatae debitis, reiciendis inventore!
+        Asperiores sint, at, cupiditate fugit saepe officiis nemo impedit
+        laudantium consectetur officia aliquam.
+      </section>
+
+      <div class='block md:hidden'>
+        <SectionBuyProduct />
+      </div>
     </div>
 
-    <div>
+    <div class='hidden md:block'>
       <SectionBuyProduct />
     </div>
   </div>

@@ -1,8 +1,8 @@
-<section class='sticky top-0 z-10 flex flex-col gap-y-4'>
+<section class='relative md:sticky top-0 z-10 flex flex-col gap-y-4'>
   <h2 class='text-2xl font-semibold'>Titulo del producto</h2>
 
-  <div>
-    <div>
+  <div class='flex gap-x-2'>
+    <div class='flex items-center gap-x-2'>
       <svg
         width='24'
         height='24'
@@ -20,15 +20,31 @@
 
       <span>4.7</span>
     </div>
-    <a href='reseñas'>12 Reseñas</a>
+    <a
+      href='reseñas'
+      class='border-l-2 pl-2 hover:underline underline-offset-2'
+      >12 Reseñas</a
+    >
   </div>
 
   <div>
-    <h3>Precio</h3>
+    <h3 class='text-2xl'>$10000</h3>
     <small>Cantidad de unidades vendidas</small>
   </div>
 
-  <div>Unidades</div>
+  <div>
+    <select
+      name=''
+      id=''
+      class='bg-local_background_tertiary px-4 py-2 rounded-md'
+    >
+      <option value='1'>1</option>
+      <option value='2'>2</option>
+      <option value='3'>3</option>
+      <option value='4'>4</option>
+      <option value='5'>5</option>
+    </select>
+  </div>
 
   <div class='flex flex-col gap-y-2'>
     <a

@@ -1,4 +1,6 @@
 ---
+import DesktopProductImage from '@components/product/DesktopProductImage.astro'
+import MobileProductImage from '@components/product/MobileProductImage.astro'
 import SectionBuyProduct from '@components/product/SectionBuyProduct.astro'
 import Layout from '@layouts/Layout.astro'
 ---
@@ -8,16 +10,19 @@ import Layout from '@layouts/Layout.astro'
     class='relative grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto px-4 xl:p-0 gap-x-4'
   >
     <div class='flex flex-col gap-y-4'>
-      <section>
-        Officiis possimus dolores maxime, minima exercitationem aperiam eligendi
-        sed itaque corrupti at dignissimos beatae debitis, reiciendis inventore!
-        Asperiores sint, at, cupiditate fugit saepe officiis nemo impedit
-        laudantium consectetur officia aliquam.
+      <section
+        class='min-h-[35vh] max-h-[35vh] md:min-h-[500px] md:max-h-[500px] bg-local_background_tertiary rounded-sm overflow-hidden'
+      >
+        <DesktopProductImage />
+
+        <MobileProductImage />
       </section>
 
-      <div class='block md:hidden'>
+      <section class='block md:hidden'>
         <SectionBuyProduct />
-      </div>
+      </section>
+
+      <section id='comments'>reseñas</section>
     </div>
 
     <div class='hidden md:block'>

@@ -1,7 +1,10 @@
 ---
+import DescriptionProduct from '@components/product/DescriptionProduct.astro'
 import DesktopProductImage from '@components/product/DesktopProductImage.astro'
 import MobileProductImage from '@components/product/MobileProductImage.astro'
 import SectionBuyProduct from '@components/product/SectionBuyProduct.astro'
+import CommentsProduct from '@components/product/CommentsProduct.astro'
+import FooterProduct from '@components/product/FooterProduct.astro'
 import Layout from '@layouts/Layout.astro'
 ---
 
@@ -22,11 +25,15 @@ import Layout from '@layouts/Layout.astro'
         <SectionBuyProduct />
       </section>
 
-      <section id='comments'>reseñas</section>
+      <DescriptionProduct />
     </div>
 
     <div class='hidden md:block'>
       <SectionBuyProduct />
     </div>
   </div>
+
+  <CommentsProduct />
+
+  <FooterProduct />
 </Layout>

@@ -1,14 +1,36 @@
+import { useState } from 'react'
+
 export const SearchHome = () => {
+  const [isOpenCategory, setIsOpenCategory] = useState(false)
+  const [allCategories] = useState([
+    'All categories',
+    'Mockups',
+    'Templates',
+    'Design',
+    'Logos',
+  ])
+  const [categorySelected, setCategorySelected] = useState('All categories')
+
+  const handleOpenCategory = () => {
+    setIsOpenCategory(!isOpenCategory)
+  }
+
+  const handleCategorySelected = (category) => {
+    setCategorySelected(category)
+    setIsOpenCategory(false)
+  }
+
   return (
     <form className='mx-auto w-full max-w-lg'>
-      <div className='flex'>
+      <div className='flex relative'>
         <button
           id='dropdown-button'
+          onClick={handleOpenCategory}
           data-dropdown-toggle='dropdown'
           className='flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200'
           type='button'
         >
-          All categories
+          {categorySelected}
           <svg
             className='w-2.5 h-2.5 ms-2.5'
             aria-hidden='true'
@@ -25,48 +47,35 @@ export const SearchHome = () => {
             ></path>
           </svg>
         </button>
-        <div
-          id='dropdown'
-          className='z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44'
-        >
-          <ul
-            className='py-2 text-sm text-gray-700'
-            aria-labelledby='dropdown-button'
+        {isOpenCategory && (
+          <div
+            id='dropdown'
+            className='z-10 absolute top-12 bg-white divide-y divide-gray-100 rounded-lg shadow w-44'
           >
-            <li>
-              <button
-                type='button'
-                className='inline-flex w-full px-4 py-2 hover:bg-gray-100'
-              >
-                Mockups
-              </button>
-            </li>
-            <li>
-              <button
-                type='button'
-                className='inline-flex w-full px-4 py-2 hover:bg-gray-100'
-              >
-                Templates
-              </button>
-            </li>
-            <li>
-              <button
-                type='button'
-                className='inline-flex w-full px-4 py-2 hover:bg-gray-100'
-              >
-                Design
-              </button>
-            </li>
-            <li>
-              <button
-                type='button'
-                className='inline-flex w-full px-4 py-2 hover:bg-gray-100'
-              >
-                Logos
-              </button>
-            </li>
-          </ul>
-        </div>
+            <ul
+              className='py-2 text-sm text-gray-700'
+              aria-labelledby='dropdown-button'
+            >
+              {allCategories.map((category, index) => {
+                if (category === categorySelected) {
+                  return null
+                }
+
+                return (
+                  <li key={index}>
+                    <button
+                      onClick={() => handleCategorySelected(category)}
+                      type='button'
+                      className='inline-flex w-full px-4 py-2 hover:bg-gray-100'
+                    >
+                      {category}
+                    </button>
+                  </li>
+                )
+              })}
+            </ul>
+          </div>
+        )}
         <div className='relative w-full'>
           <input
             type='search'

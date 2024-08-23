@@ -35,7 +35,10 @@ import { SearchHome } from '../home/SearchHome'
       </svg>
     </button>
 
-    <div class='items-center gap-x-2 hidden md:flex'>
+    <a
+      href='/login'
+      class='items-center gap-x-2 hidden md:flex'
+    >
       <div>
         <svg
           width='30'
@@ -56,9 +59,10 @@ import { SearchHome } from '../home/SearchHome'
           Iniciar <br /> Sesión
         </h3>
       </div>
-    </div>
+    </a>
+
     <div class='flex items-center gap-x-2 sm:gap-x-4'>
-      <div>
+      <a href='/products/favorites'>
         <svg
           width='30'
           height='30'
@@ -71,9 +75,10 @@ import { SearchHome } from '../home/SearchHome'
             fill='currentColor'
           ></path>
         </svg>
-      </div>
+      </a>
+
       <div class='flex items-center gap-1'>
-        <div>
+        <a href='/products/cart'>
           <svg
             width='30'
             height='30'
@@ -86,7 +91,7 @@ import { SearchHome } from '../home/SearchHome'
               fill='currentColor'
             ></path>
           </svg>
-        </div>
+        </a>
         <div class='flex-col w-24 hidden lg:flex'>
           <small>Total</small>
           <p class='text-lg font-semibold truncate'>$0</p>

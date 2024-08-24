@@ -1,11 +1,11 @@
 <section
-  class='relative max-w-7xl mx-auto px-4 xl:p-0 transition-transform duration-500 ease-in-out'
+  class='relative max-w-7xl mx-auto px-4 xl:p-0'
   data-carousel='slide'
 >
   <!-- Carousel wrapper -->
   <div
     id='container-carousel'
-    class='relative h-56 overflow-hidden rounded-sm md:rounded-2xl md:h-[500px]'
+    class='min-h-56 max-h-56 overflow-hidden rounded-sm md:rounded-2xl md:min-h-[500px] md:max-h-[500px] bg-local_background_tertiary'
   >
     <!-- Item 1 -->
     <div
@@ -13,8 +13,8 @@
       data-carousel-img
     >
       <img
-        src='https://i.blogs.es/0ca9a6/aa/1366_2000.jpeg'
-        class='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
+        src='https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg'
+        class='min-h-56 w-full bg-center'
         alt='...'
       />
     </div>
@@ -25,7 +25,7 @@
     >
       <img
         src='https://www.educaciontrespuntocero.com/wp-content/uploads/2020/04/mejores-bancos-de-imagenes-gratis.jpg'
-        class='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
+        class='min-h-56 w-full bg-center'
         alt='...'
       />
     </div>
@@ -36,7 +36,7 @@
     >
       <img
         src='https://media.istockphoto.com/id/636379014/es/foto/manos-la-formaci%C3%B3n-de-una-forma-de-coraz%C3%B3n-con-silueta-al-atardecer.jpg?s=612x612&w=0&k=20&c=R2BE-RgICBnTUjmxB8K9U0wTkNoCKZRi-Jjge8o_OgE='
-        class='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
+        class='min-h-56 w-full bg-center'
         alt='...'
       />
     </div>
@@ -47,7 +47,7 @@
     >
       <img
         src='https://st.depositphotos.com/1016440/2534/i/450/depositphotos_25344733-stock-photo-sunrise-at-the-beach.jpg'
-        class='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
+        class='min-h-56 w-full bg-center'
         alt='...'
       />
     </div>
@@ -57,14 +57,16 @@
       data-carousel-img
     >
       <img
-        src='https://cdn.dribbble.com/userupload/8002232/file/original-3f3260df58d06d1de743f6a33659700b.jpg?resize=752x'
-        class='absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
+        src='https://cdn.dribbble.com/userupload/8002232/file/original-3f3260df58d06d1de743f6a33659700b.jpg'
+        class='min-h-56 w-full bg-center'
         alt='...'
       />
     </div>
   </div>
   <!-- Slider indicators -->
-  <div class='absolute z-30 flex bottom-5 left-[6%] space-x-3'>
+  <div
+    class='absolute z-30 flex md:bottom-5 md:left-[12%] -translate-x-1/2 md:-translate-x-0 md:translate-y-0 -translate-y-1/2 top-[92%] left-1/2 space-x-3 bg-local_background_secondary/20 p-1 rounded-full'
+  >
     <button
       type='button'
       class='w-3 h-3 rounded-full bg-white'
@@ -104,14 +106,14 @@
   <!-- Slider controls -->
   <button
     type='button'
-    class='absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none'
+    class='absolute top-0 start-0 md:flex items-center justify-center h-full px-4 ml-4 hover:bg-local_background_secondary/40 cursor-pointer group hidden md:rounded-l-2xl transition-colors'
     data-carousel-prev
   >
     <span
-      class='inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none'
+      class='inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30'
     >
       <svg
-        class='w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180'
+        class='w-4 h-4 text-white'
         aria-hidden='true'
         xmlns='http://www.w3.org/2000/svg'
         fill='none'
@@ -130,14 +132,14 @@
   </button>
   <button
     type='button'
-    class='absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none'
+    class='absolute top-0 end-0 md:flex items-center justify-center h-full px-4 mr-4 hover:bg-local_background_secondary/40 cursor-pointer group hidden md:rounded-r-2xl transition-colors'
     data-carousel-next
   >
     <span
-      class='inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none'
+      class='inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30'
     >
       <svg
-        class='w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180'
+        class='w-4 h-4 text-white'
         aria-hidden='true'
         xmlns='http://www.w3.org/2000/svg'
         fill='none'
@@ -173,10 +175,42 @@
   const containerCarousel = $('#container-carousel')
   const dataCarouselImg = $$('[data-carousel-img]')
   const dataCarouselButton = $$('[data-carousel-slide-to]')
+  const dataCarouselPrev = $('[data-carousel-prev]')
+  const dataCarouselNext = $('[data-carousel-next]')
 
   let indexImage = 0
 
+  dataCarouselNext.addEventListener('click', () => {
+    nextImage()
+    intervalImage()
+    resetCarousel()
+    nextButton()
+  })
+
+  dataCarouselPrev.addEventListener('click', () => {
+    prevImage()
+    intervalImage()
+    resetCarousel()
+    nextButton()
+  })
+
   function nextImage() {
+    if (indexImage === dataCarouselImg.length - 1) {
+      indexImage = 0
+    } else {
+      indexImage += 1
+    }
+  }
+
+  function prevImage() {
+    if (indexImage === 0) {
+      indexImage = dataCarouselImg.length - 1
+    } else {
+      indexImage -= 1
+    }
+  }
+
+  function intervalImage() {
     dataCarouselImg.forEach((item, index) => {
       if (index === indexImage) {
         item.classList.remove('hidden_img')
@@ -208,7 +242,7 @@
   function handleClickButtonSelect(numberCarousel) {
     indexImage = numberCarousel
 
-    nextImage()
+    intervalImage()
     nextButton()
 
     resetCarousel()
@@ -224,7 +258,7 @@
         indexImage = 0
       }
 
-      nextImage()
+      intervalImage()
       nextButton()
     }, 3000)
   }

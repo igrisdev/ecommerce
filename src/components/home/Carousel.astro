@@ -106,7 +106,7 @@
   <!-- Slider controls -->
   <button
     type='button'
-    class='absolute top-0 start-0 md:flex items-center justify-center h-full px-4 ml-4 hover:bg-local_background_secondary/40 cursor-pointer group hidden md:rounded-l-2xl transition-colors'
+    class='absolute top-0 start-0 md:flex items-center justify-center h-full px-4 ml-4 xl:ml-0 hover:bg-local_background_secondary/40 cursor-pointer group hidden md:rounded-l-2xl transition-colors'
     data-carousel-prev
   >
     <span
@@ -132,7 +132,7 @@
   </button>
   <button
     type='button'
-    class='absolute top-0 end-0 md:flex items-center justify-center h-full px-4 mr-4 hover:bg-local_background_secondary/40 cursor-pointer group hidden md:rounded-r-2xl transition-colors'
+    class='absolute top-0 end-0 md:flex items-center justify-center h-full px-4 mr-4 xl:mr-0 hover:bg-local_background_secondary/40 cursor-pointer group hidden md:rounded-r-2xl transition-colors'
     data-carousel-next
   >
     <span
@@ -179,6 +179,18 @@
   const dataCarouselNext = $('[data-carousel-next]')
 
   let indexImage = 0
+
+  containerCarousel.addEventListener('touchstart', (e) => {
+    console.log('touches', e.touches)
+    console.log('targetTouches', e.targetTouches)
+    console.log('changedTouches', e.changedTouches)
+  })
+
+  containerCarousel.addEventListener('touchend', (e) => {
+    console.log('touches', e.touches)
+    console.log('targetTouches', e.targetTouches)
+    console.log('changedTouches', e.changedTouches)
+  })
 
   dataCarouselNext.addEventListener('click', () => {
     nextImage()
